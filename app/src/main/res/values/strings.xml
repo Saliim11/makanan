@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Makanan</string>
+    <string name="kode_username">masukkan username</string>
+    <string name="kode_password">masukkan password</string>
+    <string name="login">login</string>
+    <string name="kode_pindah_register">tidak punya akun register sekarang</string>
+    <string name="kode_nama">masukkan nama</string>
+    <string name="kode_admin">admin</string>
+    <string name="kode_user">user biasa</string>
+    <string name="register">register</string>
+</resources>
