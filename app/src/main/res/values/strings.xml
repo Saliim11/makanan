@@ -8,4 +8,19 @@
     <string name="kode_admin">admin</string>
     <string name="kode_user">user biasa</string>
     <string name="register">register</string>
+
+    <string-array name="fruit">
+        <item>Apple</item>
+        <item>Grape</item>
+        <item>Pineapple</item>
+        <item>Durian</item>
+        <item>Mango</item>
+        <item>Orange</item>
+        <item>Banana</item>
+        <item>Lychee</item>
+        <item>Water Melon</item>
+        <item>Melon</item>
+        <item>Kiwi</item>
+        <item>Coconut</item>
+    </string-array>
 </resources>

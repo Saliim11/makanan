@@ -11,6 +11,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiService {
 
@@ -34,7 +35,10 @@ public interface ApiService {
             @Field("vslevel")String level
             );
 
-    @GET("getdatamakanan.php?vsiduser=114&vsidkastrkategorimakanan=5")
-    Call<ResponseMakanan> makan();
+    @GET("getdatamakanan.php")
+    Call<ResponseMakanan> makan(
+            @Query("vsiduser") String idUser,
+            @Query("vsidkastrkategorimakanan") String idMakanan
+    );
 
 }
