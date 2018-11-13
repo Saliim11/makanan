@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="mini_size">10dp</dimen>
+    <dimen name="image_list_size">100dp</dimen>
+    <dimen name="size_30">30dp</dimen>
 </resources>

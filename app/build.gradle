@@ -21,11 +21,14 @@ android {
         production {
             applicationIdSuffix ".production"
             buildConfigField("String", "BASE_URL", "\"http://192.168.95.104/makanan/\"")
+            buildConfigField("String", "GAMBAR", "\"foto_makanan/\"")
 
         }
         development {
             applicationIdSuffix ".production"
             buildConfigField("String", "BASE_URL", "\"http://192.168.95.104/makanan/\"")
+            buildConfigField("String", "GAMBAR", "\"foto_makanan/\"")
+
         }
     }
 }
@@ -45,4 +48,5 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
 }

@@ -1,8 +1,11 @@
 package com.saliim.makanan.pojo;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class DataMakananItem{
+public class DataMakananItem implements Parcelable {
 
 	@SerializedName("foto_makanan")
 	private String fotoMakanan;
@@ -46,4 +49,37 @@ public class DataMakananItem{
 			",makanan = '" + makanan + '\'' + 
 			"}";
 		}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		dest.writeString(this.fotoMakanan);
+		dest.writeString(this.insertTime);
+		dest.writeString(this.makanan);
+	}
+
+	public DataMakananItem() {
+	}
+
+	protected DataMakananItem(Parcel in) {
+		this.fotoMakanan = in.readString();
+		this.insertTime = in.readString();
+		this.makanan = in.readString();
+	}
+
+	public static final Parcelable.Creator<DataMakananItem> CREATOR = new Parcelable.Creator<DataMakananItem>() {
+		@Override
+		public DataMakananItem createFromParcel(Parcel source) {
+			return new DataMakananItem(source);
+		}
+
+		@Override
+		public DataMakananItem[] newArray(int size) {
+			return new DataMakananItem[size];
+		}
+	};
 }
