@@ -33,6 +33,8 @@ public class AfterLoginActivity extends AppCompatActivity {
     @BindView(R.id.spin)
     Spinner spin;
 
+    public static String USERID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +76,6 @@ public class AfterLoginActivity extends AppCompatActivity {
     public void spinnerItemSelected(int position) {
         String pos = String.valueOf(position);
         Toast.makeText(this, pos, Toast.LENGTH_SHORT).show();
-        getData("114", pos);
+        getData(USERID, pos);
     }
 }

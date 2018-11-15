@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if(result.equals("1")){
                             startActivity(new Intent(MainActivity.this, AfterLoginActivity.class));
+                            AfterLoginActivity.USERID = response.body().getUser().getIdUser();
                             finish();
                         }
                     }

@@ -10,8 +10,14 @@
      
      // $vsid ='117';
      // $vsidkategorimakanan = 'aneka ayam & bebek';
-        
-    $sql = "SELECT makanan,foto_makanan,insert_time FROM tblmakanan tm,tbluser tu,tblkategorimakanan tkm WHERE tm.id_user='$vsid' AND tkm.id_kategori = '$vsidkategorimakanan' AND tu.id_user = tm.id_user";
+    
+
+
+    $sql = ($vsidkategorimakanan != '0') ?
+            "SELECT makanan,foto_makanan,insert_time FROM tblmakanan tm,tbluser tu,tblkategorimakanan tkm
+            WHERE tm.id_user='$vsid' AND tkm.id_kategori = '$vsidkategorimakanan' AND tu.id_user = tm.id_user AND tm.id_kategori = tkm.id_kategori" :
+
+            "SELECT makanan,foto_makanan,insert_time FROM tblmakanan tm,tbluser tu WHERE tm.id_user='$vsid' AND tu.id_user = tm.id_user";
 
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
